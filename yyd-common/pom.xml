@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.yxt</groupId>
+        <artifactId>yyd-parent</artifactId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.yxt.yyd</groupId>
+    <artifactId>yyd-common</artifactId>
+    <version>0.0.1</version>
+    <modules>
+        <module>yyd-common-core</module>
+        <module>yyd-common-base</module>
+    </modules>
+    <packaging>pom</packaging>
+    <name>yyd-common</name>
+    <description>框架的公共项目，存放项目中用到的基础类、公共类及工具类。各项目根据需要引用对应子项目</description>
+
+
+</project>

@@ -1,0 +1,39 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 300000
+server:
+  port: 8111
+spring:
+  application:
+    name: gateway-server
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      routes:
+        - id: yyd-system
+          predicates:
+            - Path= /system/**
+          uri: lb://yxt-yyd-system
+          filters:
+            - StripPrefix=1
+ignore:
+  whites:
+
+
+
+  whitesTwo:
+    ###swagger相关开始
+    - /doc.html
+    - /webjars/**
+    - /swagger-resources
+    - /v2/**
+    - /favicon.ico
+    - /upload/**
+    ###swagger相关结束
+
